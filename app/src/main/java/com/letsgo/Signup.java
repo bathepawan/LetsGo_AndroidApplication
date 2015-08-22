@@ -12,10 +12,6 @@ public class Signup extends ActionBarActivity {
 
 
     /* Is there a ConnectionResult resolution in progress? */
-    private boolean mIsResolving = false;
-
-    /* Should we automatically resolve ConnectionResults when possible? */
-    private boolean mShouldResolve = false;
 
 
 
