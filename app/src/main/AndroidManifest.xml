@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.letsgo" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="CreateProfile"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".Signup"
+            android:label="@string/title_activity_signup"
+            android:parentActivityName=".CreateProfile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.letsgo.CreateProfile" />
+        </activity>
+        <activity
+            android:name="LetsGo_Start"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_lets_go__start"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+        <activity
+            android:name="GettingStarted"
+            android:label="@string/title_activity_getting_started" >
+        </activity>
+    </application>
+
+</manifest>

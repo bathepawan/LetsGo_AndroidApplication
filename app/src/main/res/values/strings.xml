@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">LetsGo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="createprofile"> Create Your Profile!</string>
+    <string name="tellus"> Tell us your requirement </string>
+    <string name="seeker">   I\'m a Seeker  </string>
+    <string name="seekersubtext"> Looking for Car/Bus to travel</string>
+    <string name="dummyline"> __________________________ </string>
+    <string name="vehicleowner">I\'m Car Owner</string>
+    <string name="ownersubtext"> Looking buddy for car pooling </string>
+    <string name="agency">We are travel agency</string>
+    <string name="agencysubtext"> We offer bus/travel services</string>
+    <string name="note"> You can\'t change this preferences later</string>
+    <string name="title_activity_signup">Signup</string>
+    <string name="lookingfor">Planning to travel.</string>
+    <string name="loginnote">Login with your social account to start</string>
+    <string name="whynotemail"> WHY NOT EMAIL?</string>
+    <string name="whynotemail_details"> <p> Allowing only verified users on platform helps us keep it spam free and provide our users with better experience overall
+        . </p> </string>
+    <string name="wedontpost"> We never post anything on your behalf. </string>
+    <string name="title_activity_splash_start">splash_start</string>
+
+    <string name="title_activity_lets_go__start">LetsGo_Start</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_getting_started">GettingStarted</string>
+    <string name="create"> 1. Create your profile.</string>
+    <string name="fill_travel_details"> 2. Fill your travel details.</string>
+    <string name="you_can_travel_with"> 3. Browse through verified profiles. </string>
+    <string name="chat_safe">4.Control  people contacting you. </string>
+    <string name="create1"> Fill your details </string>
+    <string name="fill_travel_details1"> Tell us about your travel destinations.</string>
+    <string name="you_can_travel_with1"> Browse through people you can travel with </string>
+    <string name="chat_safe1"> Accept or deny travel requests </string>
+    <string name="getstarted"> Get Started </string>
+
+</resources>
