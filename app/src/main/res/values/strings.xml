@@ -35,5 +35,12 @@
     <string name="you_can_travel_with1"> Browse through people you can travel with </string>
     <string name="chat_safe1"> Accept or deny travel requests </string>
     <string name="getstarted"> Get Started </string>
+    <string name="title_activity_travel_details">TravelDetails</string>
+    <string name="title_activity_create_seeker_profile">create_seeker_profile</string>
+    <string name="from_hint">Enter source. </string>
+    <string name="to_hint">Enter destination. </string>
+    <string name="finewithbus">Are you fine with bus?</string>
+    <string name="signing">Please wait, Signing in.</string>
+    <string name="auth_success">Authentication Successful</string>
 
 </resources>

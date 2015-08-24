@@ -2,13 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.letsgo" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="CreateProfile"
+            android:name=".CreateProfile"
             android:label="@string/app_name" >
         </activity>
         <activity
@@ -20,7 +24,7 @@
                 android:value="com.letsgo.CreateProfile" />
         </activity>
         <activity
-            android:name="LetsGo_Start"
+            android:name=".LetsGo_Start"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_lets_go__start"
             android:theme="@style/FullscreenTheme" >
@@ -30,11 +34,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-
         </activity>
         <activity
-            android:name="GettingStarted"
+            android:name=".GettingStarted"
             android:label="@string/title_activity_getting_started" >
+        </activity>
+        <activity
+            android:name=".TravelDetails"
+            android:label="@string/title_activity_travel_details" >
+        </activity>
+        <activity
+            android:name="create_seeker_profile"
+            android:label="@string/title_activity_create_seeker_profile" >
+
         </activity>
     </application>
 
