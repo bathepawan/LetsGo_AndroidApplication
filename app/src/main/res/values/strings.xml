@@ -35,13 +35,22 @@
     <string name="chat_safe1"> Accept or deny travel requests </string>
     <string name="getstarted"> Get Started </string>
     <string name="title_activity_travel_details">TravelDetails</string>
-    <string name="title_activity_create_seeker_profile">create_seeker_profile</string>
+    <string name="title_activity_create_seeker_profile">Create Profile - Seeker </string>
     <string name="from_hint">Enter source. </string>
     <string name="to_hint">Enter destination. </string>
     <string name="finewithbus">ARE YOU FINE WITH BUS ?</string>
     <string name="signing">Please wait, Signing in.</string>
     <string name="auth_success">Authentication Successful</string>
     <string name="tellusmore">Specific notes if any</string>
-    <string name="title_activity_create_owner_profile">Create Owner Profile</string>
+    <string name="title_activity_create_owner_profile">Create Profile - Owner </string>
+    <string name="title_activity_master_activity">Let\'s Go!</string>
 
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item >Home</item>
+        <item >Create Profile</item>
+        <item >Blocked Users</item>
+        <item >Feedback</item>
+        <item >Logout</item>
+    </string-array>
 </resources>

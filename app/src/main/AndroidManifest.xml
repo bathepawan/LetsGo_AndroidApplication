@@ -28,24 +28,28 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_lets_go__start"
             android:theme="@style/FullscreenTheme" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
-
         <activity
             android:name=".GettingStarted"
             android:label="@string/title_activity_getting_started" >
         </activity>
-
         <activity
-            android:name="create_seeker_profile"
+            android:name=".create_seeker_profile"
             android:label="@string/title_activity_create_seeker_profile" >
         </activity>
-        <activity android:name="com.letsgo.createOwnerProfile"
-            android:label="@string/title_activity_create_owner_profile">
+        <activity
+            android:name=".createOwnerProfile"
+            android:label="@string/title_activity_create_owner_profile" >
+        </activity>
+        <activity
+            android:name=".master_activity"
+            android:label="@string/title_activity_master_activity"
+            android:theme="@android:style/Theme.Holo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
