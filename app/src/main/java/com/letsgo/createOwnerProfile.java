@@ -19,51 +19,77 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 
-public class create_seeker_profile extends ActionBarActivity  {
+public class createOwnerProfile extends ActionBarActivity {
 
     private static int DATE_DIALOG_ID=0;
+    private SeekBar budget;
+    private int global_progress;
+    TextView txtDOJ,budget_amt;
     private int mYear;
     private int mMonth;
     private int mDay;
-    private int global_progress;
-    private SeekBar budget;
-    TextView txtDOJ,budget_amt;
     Calendar c=null;
     final String months[]= {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"};
     private static final String[] CITIES = new String[] {
             "Pune", "Mumbai", "Aurangabad", "Buldhana", "Kolhapur","Khamgaon","Malkapur","Nagpur","Satara","Ahamadnagar"
     };
-
+    private static final String[] RTO = new String[] {
+        "MH-1","MH-2","MH-3","MH-4","MH-5","MH-6","MH-7","MH-8","MH9","MH-10",
+            "MH-11","MH-12","MH-13","MH-14","MH-15","MH-16","MH-17","MH-18","MH19","MH-20",
+            "MH-21","MH-22","MH-23","MH-24","MH-25","MH-26","MH-27","MH-28","MH29","MH-30",
+            "MH-31","MH-32","MH-33","MH-34","MH-35","MH-36","MH-37","MH-38","MH39","MH-40",
+            "MH-41","MH-42","MH-43","MH-44","MH-45","MH-46","MH-47","MH-48","MH49","MH-50",
+            "MH-51","MH-52","MH-53","MH-54"
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_create_seeker_profile);
-        txtDOJ = (TextView) findViewById(R.id.textDOJ);
+        setContentView(R.layout.activity_create_owner_profile);
+
         budget=(SeekBar)findViewById(R.id.budget_seekbar);
         budget_amt=(TextView)findViewById(R.id.budget);
-
+        txtDOJ=(TextView)findViewById(R.id.textDOJ);
         c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
         mDay = c.get(Calendar.DAY_OF_MONTH);
+        AutoCompleteTextView textViewRTO = (AutoCompleteTextView)
+                findViewById(R.id.rto);
+        AutoCompleteTextView textViewFrom = (AutoCompleteTextView)
+                findViewById(R.id.textFrom);
+        AutoCompleteTextView textViewTo = (AutoCompleteTextView)
+                findViewById(R.id.textTo);
 
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line,RTO);
+
+        ArrayAdapter<String> adapter_cities = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, CITIES);
+
+
+        textViewRTO.setAdapter(adapter);
+        textViewFrom.setAdapter(adapter_cities);
+        textViewTo.setAdapter(adapter_cities);
+
+
+        txtDOJ.setText("  " + String.valueOf(mDay) + " " + months[mMonth]+" "+String.valueOf(mYear));
 
         try {
 
             budget.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
                 public void onStopTrackingTouch(SeekBar seekBar) {
-                //Logic
+                    //Logic
                 }
 
                 public void onStartTrackingTouch(SeekBar arg0) {
-                //Logic
+                    //Logic
                 }
 
 
                 public void onProgressChanged(SeekBar arg0, int progress, boolean arg2) {
                     budget_amt.setText(String.valueOf(progress));
-                    Log.d("DEBUG", "Progress is: " +String.valueOf(progress));
+                    Log.d("DEBUG", "Progress is: " + progress);
 //                    updateDisplay();
                 }
             });
@@ -74,29 +100,13 @@ public class create_seeker_profile extends ActionBarActivity  {
             System.out.println("EXCEPTION");
         }
 
-        txtDOJ.setText("  " +String.valueOf(mDay)+" "+months[mMonth]+" "+String.valueOf(mYear));
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, CITIES);
-
-        AutoCompleteTextView textViewFrom = (AutoCompleteTextView)
-                findViewById(R.id.textFrom);
-        AutoCompleteTextView textViewTo = (AutoCompleteTextView)
-                findViewById(R.id.textTo);
-
-        textViewFrom.setAdapter(adapter);
-        textViewTo.setAdapter(adapter);
-
-
-
         txtDOJ.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 showDialog(DATE_DIALOG_ID);
             }
         });
-
-
     }
+
 
     private DatePickerDialog.OnDateSetListener mDateSetListener =
             new DatePickerDialog.OnDateSetListener() {
@@ -125,7 +135,7 @@ public class create_seeker_profile extends ActionBarActivity  {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_create_seeker_profile, menu);
+        getMenuInflater().inflate(R.menu.menu_create_owner_profile, menu);
         return true;
     }
 
@@ -141,19 +151,17 @@ public class create_seeker_profile extends ActionBarActivity  {
             return true;
         }
 
-       return super.onOptionsItemSelected(item);
+        return super.onOptionsItemSelected(item);
     }
+
 
     private void updateDisplay() {
 
-        txtDOJ.setText("  " +String.valueOf(mDay)+" "+months[mMonth]+" "+String.valueOf(mYear));
+        txtDOJ.setText("  " + String.valueOf(mDay) + " " + months[mMonth] + " " + String.valueOf(mYear));
 
     }
     private void updateBudget() {
         budget_amt.setText(global_progress);
     }
-
-
-
 
 }

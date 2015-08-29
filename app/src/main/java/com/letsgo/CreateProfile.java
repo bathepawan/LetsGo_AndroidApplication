@@ -11,6 +11,7 @@ import android.widget.Button;
 
 public class CreateProfile extends ActionBarActivity {
 
+    private static int USER_TYPE=0;
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +23,11 @@ public class CreateProfile extends ActionBarActivity {
         btnSeeker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CreateProfile.USER_TYPE=0;
                 Intent signupIntent= new Intent(CreateProfile.this,Signup.class);
                 String Message= " Planning to travel.";
                 signupIntent.putExtra("Message",Message);
+                signupIntent.putExtra("UserType",CreateProfile.USER_TYPE);
                 startActivity(signupIntent);
             }
         });
@@ -32,9 +35,11 @@ public class CreateProfile extends ActionBarActivity {
         btnOwner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CreateProfile.USER_TYPE=1;
                 Intent signupIntent= new Intent(CreateProfile.this,Signup.class);
                 String Message= " Looking for travel mate.";
                 signupIntent.putExtra("Message",Message);
+                signupIntent.putExtra("UserType",CreateProfile.USER_TYPE);
                 startActivity(signupIntent);
             }
         });
@@ -42,9 +47,11 @@ public class CreateProfile extends ActionBarActivity {
         btnAgency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CreateProfile.USER_TYPE=2;
                 Intent signupIntent= new Intent(CreateProfile.this,Signup.class);
                 String Message= "Looking for passengers. ";
                 signupIntent.putExtra("Message",Message);
+                signupIntent.putExtra("UserType",CreateProfile.USER_TYPE);
                 startActivity(signupIntent);
             }
         });

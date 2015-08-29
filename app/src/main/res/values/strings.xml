@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">LetsGo</string>
-
+    <string name="app_name">Let\'s Go!</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="createprofile"> Create Your Profile!</string>
@@ -22,7 +21,7 @@
     <string name="wedontpost"> We never post anything on your behalf. </string>
     <string name="title_activity_splash_start">splash_start</string>
 
-    <string name="title_activity_lets_go__start">LetsGo_Start</string>
+    <string name="title_activity_lets_go__start">Let\'s Go Start</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_getting_started">GettingStarted</string>
@@ -39,8 +38,10 @@
     <string name="title_activity_create_seeker_profile">create_seeker_profile</string>
     <string name="from_hint">Enter source. </string>
     <string name="to_hint">Enter destination. </string>
-    <string name="finewithbus">Are you fine with bus?</string>
+    <string name="finewithbus">ARE YOU FINE WITH BUS ?</string>
     <string name="signing">Please wait, Signing in.</string>
     <string name="auth_success">Authentication Successful</string>
+    <string name="tellusmore">Specific notes if any</string>
+    <string name="title_activity_create_owner_profile">Create Owner Profile</string>
 
 </resources>

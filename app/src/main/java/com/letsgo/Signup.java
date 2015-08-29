@@ -27,7 +27,7 @@ public class Signup extends ActionBarActivity implements GoogleApiClient.Connect
     /* Request code used to invoke sign in user interactions. */
     private static final int RC_SIGN_IN = 0;
     private static final String TAG = "LetsGoSignIn";
-
+    private static int USER_TYPE = 0;
     private String userName= "null";
 
     /* Is there a ConnectionResult resolution in progress? */
@@ -69,12 +69,13 @@ public class Signup extends ActionBarActivity implements GoogleApiClient.Connect
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
+        final TextView txtLookingFor = (TextView) findViewById(R.id.txtLookingFor);
 
         Intent currentIntent= getIntent();
+        USER_TYPE=currentIntent.getExtras().getInt("UserType");
         String seekerMessage=currentIntent.getExtras().getString("Message");
-        final TextView txtLookingFor = (TextView) findViewById(R.id.txtLookingFor);
         txtLookingFor.setText(seekerMessage);
+
 
         /*Google API Code*/
         // Build GoogleApiClient with access to basic profile
@@ -163,11 +164,27 @@ public class Signup extends ActionBarActivity implements GoogleApiClient.Connect
 
     private void showSignedInUI(String userName) {
 
-        Intent travelDetails= new Intent(Signup.this,create_seeker_profile.class);
-        travelDetails.putExtra("userName",userName);
-        startActivity(travelDetails);
+        Intent intentUserType=new Intent(Signup.this,create_seeker_profile.class);;
+        switch (USER_TYPE)
+        {
+            case 0:
+                intentUserType= new Intent(Signup.this,create_seeker_profile.class);
+                break;
+            case 1:
+                intentUserType= new Intent(Signup.this,createOwnerProfile.class);
+                break;
+            case 2:
+                intentUserType= new Intent(Signup.this,createOwnerProfile.class);
+                break;
+            default:
+                intentUserType= new Intent(Signup.this,create_seeker_profile.class);
+        }
+        intentUserType.putExtra("userName", userName);
+        intentUserType.putExtra("UserType",USER_TYPE);
+        startActivity(intentUserType);
 
-   }
+
+    }
 
     @Override
     public void onConnectionSuspended(int i) {

@@ -30,23 +30,22 @@
             android:theme="@style/FullscreenTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
         </activity>
+
         <activity
             android:name=".GettingStarted"
             android:label="@string/title_activity_getting_started" >
         </activity>
-        <activity
-            android:name=".TravelDetails"
-            android:label="@string/title_activity_travel_details" >
-        </activity>
+
         <activity
             android:name="create_seeker_profile"
             android:label="@string/title_activity_create_seeker_profile" >
-
+        </activity>
+        <activity android:name="com.letsgo.createOwnerProfile"
+            android:label="@string/title_activity_create_owner_profile">
         </activity>
     </application>
 
