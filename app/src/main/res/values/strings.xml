@@ -24,7 +24,7 @@
     <string name="title_activity_lets_go__start">Let\'s Go Start</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="title_activity_getting_started">GettingStarted</string>
+    <string name="title_activity_getting_started">Getting Started</string>
     <string name="create"> 1. Create your profile.</string>
     <string name="fill_travel_details"> 2. Fill your travel details.</string>
     <string name="you_can_travel_with"> 3. Browse through verified profiles. </string>
