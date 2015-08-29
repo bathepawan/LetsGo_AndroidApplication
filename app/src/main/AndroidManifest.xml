@@ -28,6 +28,11 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_lets_go__start"
             android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".GettingStarted"
@@ -44,12 +49,12 @@
         <activity
             android:name=".master_activity"
             android:label="@string/title_activity_master_activity"
-            android:theme="@android:style/Theme.Holo">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@android:style/Theme.Holo" >
+        </activity>
+        <activity
+            android:name=".MasterWithDrawer"
+            android:label="@string/title_activity_master_with_drawer" >
+            
         </activity>
     </application>
 

@@ -19,7 +19,7 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 
-public class create_seeker_profile extends ActionBarActivity  {
+public class create_seeker_profile extends ActionBarActivity implements View.OnClickListener {
 
     private static int DATE_DIALOG_ID=0;
     private int mYear;
@@ -27,6 +27,7 @@ public class create_seeker_profile extends ActionBarActivity  {
     private int mDay;
     private int global_progress;
     private SeekBar budget;
+    private Button save,cancel;
     TextView txtDOJ,budget_amt;
     Calendar c=null;
     final String months[]= {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"};
@@ -41,12 +42,16 @@ public class create_seeker_profile extends ActionBarActivity  {
         txtDOJ = (TextView) findViewById(R.id.textDOJ);
         budget=(SeekBar)findViewById(R.id.budget_seekbar);
         budget_amt=(TextView)findViewById(R.id.budget);
+        save=(Button)findViewById(R.id.save);
+        cancel=(Button)findViewById(R.id.cancel);
 
         c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
         mDay = c.get(Calendar.DAY_OF_MONTH);
 
+        save.setOnClickListener(this);
+        cancel.setOnClickListener(this);
 
         try {
 
@@ -154,6 +159,21 @@ public class create_seeker_profile extends ActionBarActivity  {
     }
 
 
+    /**
+     * Called when a view has been clicked.
+     *
+     * @param v The view that was clicked.
+     */
+    @Override
+    public void onClick(View v) {
 
-
+        if(v.getId()==R.id.save){
+            Intent master=new Intent(this,master_activity.class);
+            startActivity(master);
+        }
+        if(v.getId()==R.id.cancel){
+            Intent master=new Intent(this,master_activity.class);
+            startActivity(master);
+        }
+    }
 }

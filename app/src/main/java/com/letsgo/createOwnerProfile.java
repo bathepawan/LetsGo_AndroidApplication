@@ -19,7 +19,7 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 
-public class createOwnerProfile extends ActionBarActivity {
+public class createOwnerProfile extends ActionBarActivity implements View.OnClickListener {
 
     private static int DATE_DIALOG_ID=0;
     private SeekBar budget;
@@ -28,6 +28,7 @@ public class createOwnerProfile extends ActionBarActivity {
     private int mYear;
     private int mMonth;
     private int mDay;
+    private Button save,cancel;
     Calendar c=null;
     final String months[]= {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"};
     private static final String[] CITIES = new String[] {
@@ -49,6 +50,9 @@ public class createOwnerProfile extends ActionBarActivity {
         budget=(SeekBar)findViewById(R.id.budget_seekbar);
         budget_amt=(TextView)findViewById(R.id.budget);
         txtDOJ=(TextView)findViewById(R.id.textDOJ);
+        save=(Button)findViewById(R.id.save);
+        cancel=(Button)findViewById(R.id.cancel);
+
         c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
@@ -71,6 +75,8 @@ public class createOwnerProfile extends ActionBarActivity {
         textViewFrom.setAdapter(adapter_cities);
         textViewTo.setAdapter(adapter_cities);
 
+        save.setOnClickListener(this);
+        cancel.setOnClickListener(this);
 
         txtDOJ.setText("  " + String.valueOf(mDay) + " " + months[mMonth]+" "+String.valueOf(mYear));
 
@@ -164,4 +170,20 @@ public class createOwnerProfile extends ActionBarActivity {
         budget_amt.setText(global_progress);
     }
 
+    /**
+     * Called when a view has been clicked.
+     *
+     * @param v The view that was clicked.
+     */
+    @Override
+    public void onClick(View v) {
+        if(v.getId()==R.id.save){
+            Intent master=new Intent(this,master_activity.class);
+            startActivity(master);
+        }
+        if(v.getId()==R.id.cancel){
+            Intent master=new Intent(this,master_activity.class);
+            startActivity(master);
+        }
+    }
 }

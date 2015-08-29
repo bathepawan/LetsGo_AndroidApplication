@@ -18,7 +18,7 @@ public class master_activity extends FragmentActivity {
     private TabsPagerAdapter mAdapter;
     private ActionBar actionBar;
     // Tab titles
-    private String[] tabs = { "Seekers", "Owners", "Agencies","Chats" };
+    private String[] tabs = { "SEEKERS", "OWNERS", "AGENCIES","CHATS" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
