@@ -33,6 +33,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".GettingStarted"
@@ -50,11 +51,7 @@
             android:name=".master_activity"
             android:label="@string/title_activity_master_activity"
             android:theme="@android:style/Theme.Holo" >
-        </activity>
-        <activity
-            android:name=".MasterWithDrawer"
-            android:label="@string/title_activity_master_with_drawer" >
-            
+
         </activity>
     </application>
 
