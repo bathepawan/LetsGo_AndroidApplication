@@ -13,12 +13,14 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".CreateProfile"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:noHistory = "true">
         </activity>
         <activity
             android:name=".Signup"
             android:label="@string/title_activity_signup"
-            android:parentActivityName=".CreateProfile" >
+            android:parentActivityName=".CreateProfile"
+            android:noHistory = "true">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.letsgo.CreateProfile" />
@@ -27,7 +29,8 @@
             android:name=".LetsGo_Start"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_lets_go__start"
-            android:theme="@style/FullscreenTheme" >
+            android:theme="@style/FullscreenTheme"
+            android:noHistory = "true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,20 +40,24 @@
         </activity>
         <activity
             android:name=".GettingStarted"
-            android:label="@string/title_activity_getting_started" >
+            android:label="@string/title_activity_getting_started"
+            android:noHistory = "true">
         </activity>
         <activity
             android:name=".create_seeker_profile"
-            android:label="@string/title_activity_create_seeker_profile" >
+            android:label="@string/title_activity_create_seeker_profile"
+            android:noHistory = "true">
         </activity>
         <activity
             android:name=".createOwnerProfile"
-            android:label="@string/title_activity_create_owner_profile" >
+            android:label="@string/title_activity_create_owner_profile"
+            android:noHistory = "true">
         </activity>
         <activity
             android:name=".master_activity"
             android:label="@string/title_activity_master_activity"
-            android:theme="@android:style/Theme.Holo" >
+            android:theme="@android:style/Theme.Holo"
+            android:noHistory = "true">
 
         </activity>
     </application>

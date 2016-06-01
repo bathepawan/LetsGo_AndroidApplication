@@ -1,16 +1,15 @@
 package com.letsgo;
 
-import com.letsgo.util.SystemUiHider;
-
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.MainThread;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.letsgo.util.SystemUiHider;
 
 
 /**
@@ -115,6 +114,7 @@ public class LetsGo_Start extends Activity {
             public void onClick(View view) {
 
                 Intent getingStarted= new Intent(LetsGo_Start.this,GettingStarted.class);
+
                 startActivity(getingStarted);
             }
 
